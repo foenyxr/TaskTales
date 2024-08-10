@@ -1,13 +1,32 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';  // Import RouterModule
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [
+    CommonModule,
+    RouterModule  // Include RouterModule in the imports array
+  ]  
 })
 export class AppComponent {
-  title = 'TaskTales';
+  componentTitle = "My List";
+  filter: string = 'all';
+
+  allItems = [
+    { description: "eat", done: true },
+    { description: "sleep", done: false },
+    { description: "play", done: false },
+    { description: "laugh", done: false }
+  ];
+
+  get items() {
+    if (this.filter === "all") {
+      return this.allItems;
+    }
+    return this.allItems.filter(item => this.filter === "done" ? item.done : !item.done);
+  }
 }
