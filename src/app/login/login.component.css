@@ -1,142 +1,166 @@
 @font-face {
   font-family: "Gumdrop";
-  src: url(/assets/fonts/GUMDROP.ttf);
+  src: url(/fonts/GUMDROP.ttf) format("truetype");
 }
 
-h1 {
-  font-family: "Gumdrop";
-}
 /* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'GUMDROP', sans-serif;
-  background: linear-gradient(180deg, #6600FF 0%, #9148FF 50%, #FFFFFF 100%);
+  font-family: 'Gumdrop', 'Open Sans', sans-serif;
+  background: linear-gradient(180deg, #6600FF 0%, #9148FF 100%);
+  min-height: 100vh;
+  width: 100%;
 }
 
 .container {
-  position: relative;
-  width: 1280px;
-  height: 1706px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Title */
-.title {
-  position: absolute;
-  width: 618px;
-  height: 161px;
-  left: 278px;
-  top: 64px;
-  font-size: 128px;
-  line-height: 123px;
-  color: #FFFFFF;
+/* Header */
+.header {
+  margin-bottom: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.title {
+  font-size: 3em;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: 0.1em;
 }
 
 /* Form Container */
 .form-container {
-  position: absolute;
-  width: 586px;
-  top: 318px;
-  left: 343px;
-}
-
-.input-container {
-  position: relative;
-  margin-bottom: 16px;
-}
-
-.input-label {
-  position: absolute;
-  width: 510px;
-  height: 56px;
-  font-size: 20px;
-  line-height: 19px;
-  color: #000000;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.1em;
+  width: 30%;
 }
 
 .input-field {
-  width: 586px;
-  height: 44px;
-  border: 1px solid #FFFFFF;
-  border-radius: 10px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
   padding: 10px;
-  font-size: 20px;
-  color: #000000;
-  background: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
 }
 
 .button-container {
-  margin-top: 16px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
-.signup-button {
+.transparent-button {
   width: 100%;
-  height: 52px;
-  border-radius: 10px;
-  font-size: 20px;
-  line-height: 19px;
-  color: #FFFFFF;
-  background: transparent;
-  border: 1px solid #FFFFFF;
-  margin-bottom: 8px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF; 
+  color: #FFFFFF; 
+  padding: 5px 10px; 
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; 
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
 }
 
-.signup-button.google {
-  background: #4285F4;
+.transparent-button:hover {
+  background-color: #000; /* Change background on hover */
+  color: #fff; /* Change text color on hover */
 }
-
-.signup-button.apple {
-  background: #000000;
-}
-
 .cta {
-  position: absolute;
-  width: 211px;
-  height: 43px;
-  left: 540px;
-  top: 571px;
-  font-size: 20px;
-  line-height: 19px;
+  font-size: 18px;
   color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  margin: 10px;
+}
+
+.cta-icon {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
 }
 
 /* Promotional Text */
 .promo-text {
-  position: absolute;
-  left: 446px;
-  top: 821px;
+  font-size: 24px;
   color: #FFFFFF;
-  font-size: 36px;
-  line-height: 35px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
 }
 
-.promo-text p {
-  margin: 0;
+.bold-text {
+  font-weight: bold;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.feature {
+  text-align: center;
+  margin-left: 105px;
+  margin-right: 105px;
+}
+
+.feature-icon {
+  width: 246px;
+  height: 245px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
 }
 
 /* Footer */
 .footer {
-  position: absolute;
-  width: 832px;
-  height: 114px;
-  left: 230px;
-  top: 1547px;
+  margin-top: 20px;
 }
 
 .footer-links, .footer-sub-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
 .footer-link, .footer-sub-link {
-  font-size: 12px;
-  line-height: 12px;
-  color: #000000;
+  
+  font-size: 14px;
+  color: #000;
   text-decoration: none;
 }
 
