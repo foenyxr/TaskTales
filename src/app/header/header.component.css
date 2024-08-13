@@ -1,0 +1,42 @@
+.container {
+    margin: 0px;
+}
+.nav{
+    background: #9148FF;
+    color: #FFF;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+}
+.nav img {
+    width: 100px;
+}
+.nav .logo a{
+    color: #FFF;
+    text-decoration: none;
+}
+.nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin-left: auto
+}
+ul li{
+    padding-top: 40px;
+    list-style: none;
+    padding-right: 30px;
+    padding-left: 20px;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+}
+ul li a{
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold
+}
+section{
+    height: 300px;
+}
