@@ -84,6 +84,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   margin-bottom: 10px;
   letter-spacing: 0.1em;
+  font-family: 'Gumdrop', 'Open Sans', sans-serif;
 }
 
 .transparent-button:hover {
@@ -98,6 +99,10 @@ body {
   justify-content: center;
   letter-spacing: 0.1em;
   margin: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Gumdrop', 'Open Sans', sans-serif;
 }
 
 .cta-icon {
