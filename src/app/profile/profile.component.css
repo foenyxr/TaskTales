@@ -1,0 +1,61 @@
+.dashboard {
+    display: flex;
+    justify-content: space-around; /* Space between sections */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 80px; 
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%; 
+}
+
+.user-info h1 {
+    margin: 0 0 10px 0;
+}
+
+.progress-bar {
+    width: 200px; 
+    height: 20px; 
+    background-color: #ddd; 
+    border-radius: 10px; 
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px;
+    background-color: red; 
+    width: calc(100% * var(--progress-value) / var(--progress-max)); 
+}
+
+.task-section {
+    display: flex;
+    gap: 10px;
+}
+
+.task-button {
+    background-color: #ffffff; 
+    border: none;
+    color: #8000ff; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.task-button:hover {
+    background-color: #cccccc; 
+}
