@@ -88,8 +88,8 @@ body {
 }
 
 .transparent-button:hover {
-  background-color: #000; /* Change background on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: #000; 
+  color: #fff; 
 }
 .cta {
   font-size: 18px;
