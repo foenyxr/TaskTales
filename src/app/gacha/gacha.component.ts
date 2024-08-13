@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-gacha',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './gacha.component.html',
   styleUrl: './gacha.component.css'
 })
