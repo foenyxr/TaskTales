@@ -1,0 +1,53 @@
+<app-header></app-header>
+<app-profile></app-profile>
+<div class="form-container">
+  <input type="text" id="search" class="input-field" placeholder="Search" />
+</div>
+<div class="tasks-container">
+  <!-- Today Tasks -->
+  <div class="task-list">
+    <h2>Today</h2>
+    <div class="task-item" *ngFor="let task of todayTasks">
+      <div class="priority-circle">
+        {{ task.priority }}
+      </div>
+      <div class="task-content">
+        {{ task.name }}
+      </div>
+      <div class="mark-done">
+        <input
+          type="radio"
+          name="done"
+          [checked]="task.done"
+          (change)="markAsDone(task)"
+        />
+      </div>
+    </div>
+    <!-- If there are no tasks, show empty space -->
+    <div class="empty-space"></div>
+  </div>
+
+  <!-- Tomorrow Tasks -->
+  <div class="task-list">
+    <h2>Tomorrow</h2>
+    <div class="task-item" *ngFor="let task of tomorrowTasks">
+      <div class="priority-circle">
+        {{ task.priority }}
+      </div>
+      <div class="task-content">
+        {{ task.name }}
+      </div>
+      <div class="mark-done">
+        <input
+          type="radio"
+          name="done"
+          [checked]="task.done"
+          (change)="markAsDone(task)"
+        />
+      </div>
+    </div>
+    <!-- If there are no tasks, show empty space -->
+    <div class="empty-space"></div>
+  </div>
+</div>
+<app-footer></app-footer>

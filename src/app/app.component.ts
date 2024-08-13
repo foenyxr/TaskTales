@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';  // Import RouterModule
 
 import { LoginComponent } from './login/login.component';
 import { GachaComponent } from "./gacha/gacha.component";
+import { TasksComponent } from './tasks/tasks.component';
 
 @Component({
   standalone: true,
@@ -15,7 +16,8 @@ import { GachaComponent } from "./gacha/gacha.component";
     RouterModule // Include RouterModule in the imports array
     ,
     LoginComponent,
-    GachaComponent
+    GachaComponent,
+    TasksComponent,
 ]  
 })
 export class AppComponent {

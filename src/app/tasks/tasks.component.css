@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Gumdrop";
+  src: url(/fonts/GUMDROP.ttf) format("truetype");
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gumdrop", "Open Sans", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasks-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 0 150px;
+  height: 70vh;
+  justify-content: center;
+}
+
+/* Form Container */
+.form-container {
+  letter-spacing: 0.1em;
+  width: 30%;
+  margin: 20px 800px;
+}
+
+.input-field {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+
+.task-list {
+  flex: 1;
+  max-width: 30%;
+  height: 100%; /* Ensure both lists are the same height */
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the width/height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.priority-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.task-content {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.mark-done {
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+/* Empty space filler to ensure the containers have consistent size */
+.empty-space {
+  flex-grow: 1;
+}
